@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int FindMin(int n, int a[], int& dau, int& cuoi)
+int findMin(int n, int a[], int& dau, int& cuoi)
 {
 	int minn = a[dau], pos = dau;
 	for (int i = dau + 1; i < cuoi; i++)
@@ -22,13 +22,20 @@ int main()
 	int n;
 	cin >> n;
 	int a[1000];
-	for (int i = 0; i < n; i++) cin >> a[i];
+	for (int i = 0; i < n; i++) 
+	{
+		cin >> a[i];
+	}
 	int i = 0;
 	while (i < n)
 	{
-		int pos = FindMin(n, a, i, n);
+		int pos = findMin(n, a, i, n);
 		swap(a[i], a[pos]);
 		i++;
 	}
-	for (i = 0; i < n; i++) cout << a[i] << " ";
+	for (i = 0; i < n; i++)
+	{
+		cout << a[i] << " ";
+	}
+	return 0;
 }
