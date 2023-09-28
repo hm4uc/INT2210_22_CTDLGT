@@ -5,11 +5,11 @@ using namespace std;
 int N;
 
 void checkMaxHeap(int a[], int index) {
-    int maxx; //index cua phan tu lon nhat trong: cha, con trai, con phai
-    int left = 2*index; //index cua phan tu con trai
-    int right = 2*index + 1; //index cua phan tu con phai
+    int maxx; //Index của phần tử lớn nhất trong: cha, con trái, con phải.
+    int left = 2*index; //index của con trái.
+    int right = 2*index + 1; //index của con phải.
 
-    //Tim vi tri cua phan tu lon nhat trong 3 phan tu tren
+    //Tìm vị trí của phần tử lớn nhất trong: cha, con trái, con phải
     if (left <= N && a[left] > a[index]) {
         maxx = left;
     } else {
